@@ -8,6 +8,11 @@
 	handle /healthz {
 		respond "low-memory notice mode" 200
 	}
+	@api path /v1/* /tts /api/*
+	handle @api {
+		header Content-Type application/json
+		respond `{"error":"Chatterbox TTS Server needs at least 6 GB of RAM (Railway Hobby plan or higher). Raise the service memory limit and redeploy."}` 503
+	}
 	handle {
 		root * /srv/lowmem
 		rewrite * /index.html

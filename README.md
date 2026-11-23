@@ -18,7 +18,7 @@ Railway has no GPUs, so the model runs on CPU in full precision. Measured on Rai
 
 | Memory limit | Result |
 |---|---|
-| 0.5 GB / 1 GB (Free, Trial) | Model not loaded; the service stays healthy and shows a "needs more memory" page |
+| 0.5 GB / 1 GB (Free, Trial) | Model not loaded; the service stays healthy, shows a "needs more memory" page and answers API calls with a 503 JSON error |
 | 4 GB | Killed while loading the model |
 | 6 GB | Loads and synthesises (about 5.7 GB used) |
 | 8 GB | Recommended |
