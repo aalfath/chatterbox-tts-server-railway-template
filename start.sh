@@ -40,7 +40,7 @@ else
   mem_mb=$(( $(awk '/MemTotal/ {print $2}' /proc/meminfo) / 1024 ))
 fi
 disk_mb=$(df -Pm "$DATA" | awk 'NR==2 {print $2}')
-MIN_MEMORY_MB="${MIN_MEMORY_MB:-3500}"
+MIN_MEMORY_MB="${MIN_MEMORY_MB:-5600}"
 MIN_DISK_MB="${MIN_DISK_MB:-3800}"
 log "cpus=$cpus threads=$OMP_NUM_THREADS memory_limit=${mem_mb}MB volume=${disk_mb}MB"
 
