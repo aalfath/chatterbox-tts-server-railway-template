@@ -42,7 +42,7 @@ curl https://YOUR-DOMAIN/v1/audio/speech \
 
 OpenAI SDKs work with `base_url="https://YOUR-DOMAIN/v1"` and `api_key` set to the same key; list the voices at `/v1/audio/voices`. No other variables are needed. Switching to the Original or Multilingual model in the UI downloads more files (allow about 10 GB of volume).
 
-**Updates:** the service builds from the template repo, which pins the upstream release and its Python dependencies. When we publish a new version, Railway shows an update notice on your project; read the repo's CHANGELOG.md, then apply it. Your volume and variables are kept.
+**Updates:** the service builds from the template repo, which pins the upstream release commit, the model package commit and the base images. When we publish a new version, Railway shows an update notice on your project; read the repo's CHANGELOG.md, then apply it. Your volume and variables are kept.
 
 ## Why Deploy Chatterbox TTS Server on Railway?
 
